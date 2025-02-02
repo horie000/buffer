@@ -16,7 +16,7 @@ ListNode *getEmptListNode(ListNode *root)
     {
         if (root[ii].isEmpty == true)
         {
-            std::cout << "find empty node at ind["<<ii<<"]" << std::endl;
+            //std::cout << "find empty node at ind["<<ii<<"]" << std::endl;
             (&root[ii])->isEmpty = false;
             return &root[ii];
         }
@@ -61,8 +61,8 @@ bool pushBack(ListNode *begin, int val)
         return true;
 }
 
-bool insert(ListNode *begin, int val, int ind){
-    
+bool insert(ListNode *begin, int val, int ind)
+{
     int ii = 0;
     for(ListNode* it = begin; it ->next != nullptr; it = it->next){
         if(ii == ind ){
@@ -79,7 +79,8 @@ bool insert(ListNode *begin, int val, int ind){
     return false;
 }
 
-bool remove(ListNode *begin, int ind){
+bool remove(ListNode *begin, int ind)
+{
     int ii = 0;
     for(ListNode* it = begin; it ->next != nullptr; it = it->next){
         if(ii == ind ){
@@ -108,7 +109,8 @@ void printList(ListNode *begin)
     }
 }
 
-void printMem(ListNode *root){
+void printMem(ListNode *root)
+{
     for (int ii = 0; ii < MAX_LIST_SIZE; ii++)
     {
         std::cout << ii << " : " << &root[ii] << "/ data : " << root[ii].data <<"/ next : "<<root[ii].next<< std::endl;
